@@ -28,15 +28,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        btnSalir = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        lblNomUser = new javax.swing.JLabel();
         Container = new javax.swing.JDesktopPane();
         jMenuBar = new javax.swing.JMenuBar();
         jmAdmision = new javax.swing.JMenu();
-        jmiCItas = new javax.swing.JMenuItem();
+        jmiCitas = new javax.swing.JMenuItem();
         jmiHistorialCitas = new javax.swing.JMenuItem();
         jmEnfermero = new javax.swing.JMenu();
         jmMedico = new javax.swing.JMenu();
@@ -48,24 +48,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icon-user.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 28, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 30, 30));
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(240, 240, 240));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("Nombre Usuario");
-        jTextField1.setBorder(null);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, 153, 32));
-
-        jButton1.setBackground(new java.awt.Color(126, 198, 81));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Cerrar sesion");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/rsz_icon-sanna-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 50, -1));
+        btnSalir.setBackground(new java.awt.Color(126, 198, 81));
+        btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(0, 0, 0));
+        btnSalir.setText("Cerrar sesion");
+        btnSalir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
 
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(240, 240, 240));
@@ -83,7 +73,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jTextField3.setBorder(null);
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 90, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 50));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icon-sanna.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
+
+        lblNomUser.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblNomUser.setForeground(new java.awt.Color(0, 0, 0));
+        lblNomUser.setText("Nombre Usuario");
+        jPanel1.add(lblNomUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 140, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 50));
 
         Container.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -91,14 +89,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         Container.setLayout(ContainerLayout);
         ContainerLayout.setHorizontalGroup(
             ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
         );
         ContainerLayout.setVerticalGroup(
             ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Container, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 690, 390));
+        getContentPane().add(Container, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 770, 440));
 
         jMenuBar.setBackground(new java.awt.Color(204, 204, 204));
         jMenuBar.setBorder(null);
@@ -108,8 +106,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jmAdmision.setForeground(new java.awt.Color(0, 0, 0));
         jmAdmision.setText("Admision");
 
-        jmiCItas.setText("Agendar Cita");
-        jmAdmision.add(jmiCItas);
+        jmiCitas.setText("Agendar Cita");
+        jmAdmision.add(jmiCitas);
 
         jmiHistorialCitas.setText("Historial Citas");
         jmAdmision.add(jmiHistorialCitas);
@@ -130,19 +128,19 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane Container;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JDesktopPane Container;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JMenu jmAdmision;
     private javax.swing.JMenu jmEnfermero;
     private javax.swing.JMenu jmMedico;
-    private javax.swing.JMenuItem jmiCItas;
+    public javax.swing.JMenuItem jmiCitas;
     private javax.swing.JMenuItem jmiHistorialCitas;
+    public javax.swing.JLabel lblNomUser;
     // End of variables declaration//GEN-END:variables
 }
