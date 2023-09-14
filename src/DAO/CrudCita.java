@@ -10,7 +10,8 @@ import javax.swing.table.DefaultTableModel;
 public class CrudCita extends ConexionBD{
     
     public void BuscarCita(int codPaciente,JTable tabla){
-        DefaultTableModel tModelo =  new DefaultTableModel();
+        String[] headers={"DNI","Fecha","Hora","Nombre y Apellido","Especialidad"};
+        DefaultTableModel tModelo =  new DefaultTableModel(null,headers);
         tabla.setModel(tModelo);
         
         String query="Select c.Paciente_idPaciente, c.Fecha, c.Hora,"
@@ -22,6 +23,7 @@ public class CrudCita extends ConexionBD{
         
         try {
             ps=conexion.prepareStatement(query);
+            ps.setInt(1,codPaciente);
             rs=ps.executeQuery();
             Object[] Resultado=new Object[5];
             if(rs.next()){
