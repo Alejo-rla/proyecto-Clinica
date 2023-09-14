@@ -2,8 +2,11 @@
 package DAO;
 import Modelo.Usuario;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class Login extends ConexionBD{
     
@@ -26,4 +29,22 @@ public class Login extends ConexionBD{
         return uValido;
     }
     
+    public String obtenerNomUser(int codUser){
+        String nomUser="";
+        
+        String query="Select concat(nombre,' ',apellido) from recepcionista"
+                + " where codRecepcionista=(?);";
+        
+        try {
+            ps = conexion.prepareStatement(query);
+            ps.setInt(1, codUser);
+            rs=ps.executeQuery();
+            if(rs.next()){
+                nomUser=rs.getString(1);
+                System.out.println("nomUser");
+            }
+        } catch (SQLException ex) {}
+        return nomUser;
+
+    }
 }
