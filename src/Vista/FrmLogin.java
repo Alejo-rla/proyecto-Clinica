@@ -50,7 +50,7 @@ public class FrmLogin extends javax.swing.JFrame {
         btnIngresar.setText("Ingresar");
 
         lblEstadoIngreso.setForeground(new java.awt.Color(0, 0, 0));
-        lblEstadoIngreso.setText("Estado");
+        lblEstadoIngreso.setText("Estado Ingreso");
 
         txtClave.setBackground(new java.awt.Color(188, 188, 188));
         txtClave.setForeground(new java.awt.Color(0, 0, 0));
@@ -89,12 +89,11 @@ public class FrmLogin extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtClave)
                             .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-                            .addComponent(cbxTipoU, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(cbxTipoU, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(lblEstadoIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(44, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblEstadoIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
