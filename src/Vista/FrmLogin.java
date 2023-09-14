@@ -60,10 +60,9 @@ public class FrmLogin extends javax.swing.JFrame {
 
         cbxTipoU.setBackground(new java.awt.Color(188, 188, 188));
         cbxTipoU.setForeground(new java.awt.Color(0, 0, 0));
-        cbxTipoU.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Tipo de Usuairo");
+        jLabel4.setText("Tipo de Usuario");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
