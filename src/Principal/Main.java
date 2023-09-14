@@ -1,12 +1,17 @@
 
 package Principal;
+import Controlador.CLogin;
+import Vista.FrmLogin;
 import DAO.*;
 
 public class Main {
     
-    static ConexionBD cBD;
+    public static CLogin CLogin;
+    public static FrmLogin fl;
+    
     public static void main(String[] args) {
-        cBD = new ConexionBD();
+        fl = new FrmLogin();
+        CLogin = new CLogin(fl);
     }
     
 }
