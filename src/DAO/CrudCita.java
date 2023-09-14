@@ -4,10 +4,14 @@ import Modelo.Cita;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class CrudCita extends ConexionBD{
     
-    public void BuscarCita(int codPaciente){
+    public void BuscarCita(int codPaciente,JTable tabla){
+        DefaultTableModel tModelo =  new DefaultTableModel();
+        tabla.setModel(tModelo);
         String query="Select c.Paciente_idPaciente, c.Fecha, c.Hora,"
                 + " concat(p.Nombre,' ',p.Apellido),"
                 + " a.Nombre as 'Especialidad'  from Cita c"
@@ -18,8 +22,8 @@ public class CrudCita extends ConexionBD{
         try {
             ps=conexion.prepareStatement(query);
             rs=ps.executeQuery();
+            Object[] Resultado=new Object[5];
             if(rs.next()){
-                Object[] Resultado=new Object[5];
                 Resultado[0]=rs.getInt(1);
                 Resultado[1]=rs.getDate(2);
                 Resultado[2]=rs.getTime(3);
@@ -27,6 +31,7 @@ public class CrudCita extends ConexionBD{
                 Resultado[4]=rs.getString(5);
                 
             }
+            tModelo.addRow(Resultado);
             
         } catch (SQLException ex) {
         }
