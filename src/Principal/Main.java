@@ -10,6 +10,10 @@ public class Main {
     public static FrmLogin fl;
     
     public static void main(String[] args) {
+       InicioSesion();
+    }
+    
+    public static void InicioSesion(){
         fl = new FrmLogin();
         CLogin = new CLogin(fl);
     }
