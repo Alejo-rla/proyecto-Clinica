@@ -39,7 +39,7 @@ public class CLogin  implements ActionListener{
                 fl.dispose();
                 
                 FrmPrincipal fp= new FrmPrincipal();
-                CPrincipal cfp = new CPrincipal(fp, nomUser);
+                CFrmPrincipal cfp = new CFrmPrincipal(fp, nomUser);
                 
                 System.out.println(nomUser);
             }else{
