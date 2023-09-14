@@ -12,6 +12,7 @@ public class CrudCita extends ConexionBD{
     public void BuscarCita(int codPaciente,JTable tabla){
         DefaultTableModel tModelo =  new DefaultTableModel();
         tabla.setModel(tModelo);
+        
         String query="Select c.Paciente_idPaciente, c.Fecha, c.Hora,"
                 + " concat(p.Nombre,' ',p.Apellido),"
                 + " a.Nombre as 'Especialidad'  from Cita c"
