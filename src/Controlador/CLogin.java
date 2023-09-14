@@ -1,8 +1,11 @@
 package Controlador;
+
 import Modelo.Usuario;
 import DAO.Login;
 import Metodos.MetodosLogin;
 import Vista.FrmLogin;
+import Vista.FrmPrincipal;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -30,8 +33,15 @@ public class CLogin  implements ActionListener{
             login = new Login();
             
             if(login.validarU(u)){
+                int codUser= Integer.parseInt(fl.txtUsuario.getText());
+                
+                String nomUser= login.obtenerNomUser(codUser);
                 fl.dispose();
-                JOptionPane.showMessageDialog(null, "Ingreso correcto");
+                
+                FrmPrincipal fp= new FrmPrincipal();
+                CPrincipal cfp = new CPrincipal(fp, nomUser);
+                
+                System.out.println(nomUser);
             }else{
                 fl.lblEstadoIngreso.setText("Datos incorrectos");
                 MetodosLogin.LimpiarCampos(fl);
